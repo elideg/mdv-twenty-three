@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center mt-3">
+  <button mat-button [routerLink]="['/people']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <mat-card class="col-6" *ngIf="persons$ | async as person">
+    <mat-card-header class="align-self-center">
+      <mat-card-title>
+        <h3 mat-line>Person Id</h3>
+        <p>{{person.id}}</p>
+        <h3 mat-line>Person Name</h3>
+        <p>{{person.name}}</p>
+        <h3 mat-line>Person Mass</h3>
+        <p>{{person.mass}}</p>
+        <h3 mat-line>Person Hair Color</h3>
+        <p>{{person.hair_color}}</p>
+        <h3 mat-line>Person Gender</h3>
+        <p>{{person.gender}}</p>
+      </mat-card-title>
+    </mat-card-header>
+  </mat-card>
+</div>
